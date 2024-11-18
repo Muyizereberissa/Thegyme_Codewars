@@ -35,6 +35,41 @@ function Astray(number) {
       word )
       .join(" "); 
   }
+
+  // Two to One : removing duplicates
+
+  function longest(s1, s2) {
+    return [...new Set(s1 + s2)].sort().join('')
+  }
+
+  // Sum of two lowest positive integers
+  function sumTwoSmallestNumbers(numbers) {
+    if (numbers.length >= 4) {
+         numbers.sort((a, b) => a - b);
+ 
+    return numbers[0] + numbers[1];;
+    }
+   else 
+     throw error('array must contain atleast 4 numbers')
+   
+ }
+
+//  Fix string case
+function solve(s) {
+   
+  let x = 0;
+  let y = 0;
+
+  for (let i of s) {
+      if (i === i.toUpperCase()) {
+          x++;
+      } else {
+          y++;
+      }
+  }
+
+  return x > y ? s.toUpperCase() : s.toLowerCase();
+}
   
 
 
