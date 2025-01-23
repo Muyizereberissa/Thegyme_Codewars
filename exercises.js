@@ -70,6 +70,24 @@ function solve(s) {
 
   return x > y ? s.toUpperCase() : s.toLowerCase();
 }
+
+// Count the Digit
+function nbDig(n, d) {
+  let numCount = 0;
+  for (let i = 0; i <= n; i++) {
+      const sq = i * i; 
+      const sqStr = square.toString();
+      
+      for (let i of sqStr) {
+          if (i === d.toString()) {
+              numCount++;
+          }
+      }
+  }
+  return numCount;
+}
+let result = nbDig(10,1)
+console.log(result)
   
 
 
